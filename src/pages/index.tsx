@@ -8,11 +8,12 @@ import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { TReview } from "./types";
 import reviews from "@/lib/fetchers/reviews";
 import Footer from "@/components/Footer";
+import BuySellBanner from "@/components/Banner/BuySellBanner";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export type TProps = {
-  reivew: TReview[] | null;
+  review: TReview[] | null;
 };
 
 export const getStaticProps: GetStaticProps<TProps> = async () => {
@@ -46,6 +47,7 @@ export default function Home({
       <div className="pt-20">
         <DownloadBannerfirst />
         <TimeStamp />
+        <BuySellBanner/>
         <Review data={review} />
       </div>
       <Footer />
