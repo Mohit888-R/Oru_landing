@@ -8,6 +8,7 @@ import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { TReview } from "./types";
 import reviews from "@/lib/fetchers/reviews";
 import Footer from "@/components/Footer";
+import { FollowUs } from "@/components/FollowUs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -46,6 +47,7 @@ export default function Home({
       <div className="pt-20">
         <DownloadBannerfirst />
         <TimeStamp />
+        <FollowUs />
         <Review data={review} />
       </div>
       <Footer />

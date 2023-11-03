@@ -18,7 +18,7 @@ function Navbar() {
       >
         <nav className={`2xl:container`}>
           <div
-            className={`flex w-full min-w-max justify-between items-center gap-1 px-5 py-4 lg:px-7`}
+            className={`flex w-full min-w-max justify-between items-center gap-8 px-5 py-4 lg:px-7`}
           >
             <Link href={"/"} className="ml-1 h-8 lg:ml-0 lg:mr-2 lg:h-10">
               <Image
@@ -29,9 +29,9 @@ function Navbar() {
                 className="h-8 w-max lg:h-10"
               />
             </Link>
-            <div className="flex justify-around gap-8">
+            <div className="flex justify-around gap-2 lg:gap-8">
               <DropdownMenu>
-                <DropdownMenuTrigger asChild>
+                <DropdownMenuTrigger asChild> 
                   <div className="flex items-center hover:cursor-pointer gap-2">
                     How To <ChevronDown size={20} />
                   </div>
@@ -41,7 +41,7 @@ function Navbar() {
                     {option.map((item, index) => (
                       <li
                         key={index}
-                        className="cursor-pointer gap-2 p-1 transition-[transform] duration-200 hover:scale-105 hover:bg-gray-300"
+                        className="text-center cursor-pointer gap-2 p-1 transition-[transform] duration-200 hover:scale-105 hover:bg-gray-300"
                       >
                         {item}
                       </li>
