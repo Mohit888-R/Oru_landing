@@ -1,6 +1,9 @@
 import Countdown from "react-countdown";
 
-const targetDate = new Date("2023-11-04T00:00:00Z");
+const targetDate = new Date("2023-11-10T00:00:00Z");
+
+const formatNumber = (number?: number) =>
+  number !== undefined && number < 10 ? `0${number}` : number;
 
 const renderer = ({
   days,
@@ -9,20 +12,19 @@ const renderer = ({
   seconds,
   completed,
 }: {
-  days: number;
-  hours: number;
-  minutes: number;
-  seconds: number;
-  completed: number;
+  days?: number;
+  hours?: number;
+  minutes?: number;
+  seconds?: number;
+  completed?: boolean;
 }) => {
   if (completed) {
     return <span>Countdown expired!</span>;
   } else {
     return (
       <div>
-        <div>
-          {hours}:{minutes}:{seconds}
-        </div>
+        {formatNumber(days)}:{formatNumber(hours)}:{formatNumber(minutes)}:
+        {formatNumber(seconds)}
       </div>
     );
   }

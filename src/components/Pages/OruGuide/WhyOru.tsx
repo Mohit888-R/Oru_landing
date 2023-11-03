@@ -152,7 +152,7 @@ const WhyOruCard = ({
           <Link
             className={cn(
               buttonVariants({ variant: "secondary" }),
-              `w-full bg-[#3f3e8f] hover:bg-[#3f3e8f]`
+              `w-full bg-[#3f3e8f] hover:bg-[#3f3e8f] text-white`
             )}
             href={link}
           >

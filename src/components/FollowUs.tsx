@@ -10,18 +10,18 @@ export const FollowUs = () => {
         </span>
 
         <span className="iconContainer  lg:w-6/12 items-center lg:ml-[2.5rem] gap-4 flex  justify-between  text-black">
-          <Link
-            className="icon aspect-square rounded-full p-1 hover:scale-110"
-            href="#"
-          >
+          <div className="icon aspect-square rounded-full p-1 hover:scale-110">
             <Image
               src="/assets/Footer/mail.svg"
               height={40}
               width={40}
               alt="mail"
               className=""
+              onClick={() =>
+                (window.location.href = "mailto:contact@oruphones.com")
+              }
             />
-          </Link>
+          </div>
           <Link
             className="icon aspect-square rounded-full p-1 hover:scale-110"
             href="https://www.facebook.com/oruphones"
