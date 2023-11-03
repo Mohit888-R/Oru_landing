@@ -10,11 +10,20 @@ import { ChevronDown } from "lucide-react";
 import { Button } from "../ui/button";
 
 function Navbar() {
-  const option = ["Sell", "Buy"];
+  const option = [
+    {
+      title: "Sell",
+      src: '/oru-guide/how-to-sell'
+    },
+    {
+      title: "Buy",
+      src: '/oru-guide/how-to-buy'
+    }
+  ];
   return (
     <>
       <header
-        className={`fixed z-10  flex border w-[calc(100%-var(--removed-body-scroll-bar-size,0px))] flex-col border-brand-vl_gray backdrop-blur transition-[background,transform] duration-300 lg:border-b`}
+        className={`fixed z-20  flex border w-[calc(100%-var(--removed-body-scroll-bar-size,0px))] flex-col border-brand-vl_gray backdrop-blur transition-[background,transform] duration-300 lg:border-b`}
       >
         <nav className={`2xl:container`}>
           <div
@@ -31,7 +40,7 @@ function Navbar() {
             </Link>
             <div className="flex justify-around gap-2 lg:gap-8">
               <DropdownMenu>
-                <DropdownMenuTrigger asChild> 
+                <DropdownMenuTrigger asChild>
                   <div className="flex items-center hover:cursor-pointer gap-2">
                     How To <ChevronDown size={20} />
                   </div>
@@ -43,7 +52,8 @@ function Navbar() {
                         key={index}
                         className="text-center cursor-pointer gap-2 p-1 transition-[transform] duration-200 hover:scale-105 hover:bg-gray-300"
                       >
-                        {item}
+                        <Link href={item.src}>{item.title}</Link>
+
                       </li>
                     ))}
                   </ul>

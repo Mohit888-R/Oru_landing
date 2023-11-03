@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Provider>
-      <DevTools theme="dark" />
+      {/* <DevTools theme="dark" /> */}
         <ResponsiveInit />
         <main
           className={`${poppins.variable} ${inter.variable} font-poppins`}
