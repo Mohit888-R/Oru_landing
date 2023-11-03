@@ -1,6 +1,6 @@
 import { AppStore, PlayStore } from "../QRcode";
 
-export const GetOruPhones = () => {
+const GetOruPhones = () => {
   return (
     <div className="bg-yellow-400">
       <div className="flex lg:flex-row flex-col py-12 items-center justify-between container  px-16">
@@ -15,3 +15,5 @@ export const GetOruPhones = () => {
     </div>
   );
 };
+
+export default GetOruPhones;

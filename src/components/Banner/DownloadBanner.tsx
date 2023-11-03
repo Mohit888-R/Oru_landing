@@ -1,6 +1,6 @@
 import { AppStore, PlayStore } from "../QRcode";
 
-export const DownloadBannerfirst = () => {
+const DownloadBannerfirst = () => {
   return (
     <div className="container flex lg:flex-row flex-col items-center justify-between py-8 lg:px-16 ">
       <div className="w-10/12 text-center lg:text-left">
@@ -25,6 +25,4 @@ export const DownloadBannerfirst = () => {
   );
 };
 
-export const DownloadBannersecond = () => {
-  return <div>This is DownloadBannerfirst</div>;
-};
+export default DownloadBannerfirst;

@@ -45,3 +45,5 @@ export const TimeStamp = () => {
     </div>
   );
 };
+
+export default TimeStamp;

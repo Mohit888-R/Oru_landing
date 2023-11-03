@@ -2,7 +2,7 @@ import { Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export const BottomBar = () => {
+const BottomBar = () => {
   const externalLink = [
     { title: "Terms Of Service", link: "/terms-of-services" },
     { title: "Privacy Policy", link: "/privacy-policy" },
@@ -106,3 +106,5 @@ export const BottomBar = () => {
     </div>
   );
 };
+
+export default BottomBar;

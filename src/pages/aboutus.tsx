@@ -144,7 +144,7 @@ const AboutUs = ({
             team of professionals.
           </p>
         </div>
-        <div className="font-outline-2  container py-10 text-center text-[32px] text-gray-500 md:text-[56px]">
+        <div className="font-outline-2  container py-10 text-center text-[32px] text-white md:text-[56px]">
           <span className="text-blue-900">O</span>LD.{" "}
           <span className="text-blue-900">R</span>EFURBISHED.{" "}
           <span className="text-blue-900">U</span>SED. SMARTPHONES.

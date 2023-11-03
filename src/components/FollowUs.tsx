@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const FollowUs = () => {
+const FollowUs = () => {
   return (
     <div className="bg-[#F6C018] border">
       <div className="container px-16 py-8  flex lg:flex-row flex-col  items-center">
@@ -90,3 +90,6 @@ export const FollowUs = () => {
     </div>
   );
 };
+
+
+export default FollowUs

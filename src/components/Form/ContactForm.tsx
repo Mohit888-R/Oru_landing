@@ -90,16 +90,7 @@ const IssueType = [
   "Other",
 ];
 
-const ContactForm = ({
-  brands,
-}: {
-  brands: {
-    _id: string;
-    displayOrder: number;
-    make: string;
-    imagePath: string;
-  }[];
-}) => {
+const ContactForm = () => {
   const [firstName, setFirstName] = useState<string>();
   const [lastName, setLastName] = useState<string>();
   const [email, setEmail] = useState<string>();

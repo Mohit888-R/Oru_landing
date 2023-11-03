@@ -19,13 +19,13 @@ type TProps = {
   faqs: TFaq[] | null;
 };
 
-export const getStaticProps: GetStaticProps<TProps> = async (context) => {
+export const getStaticProps: GetStaticProps<TProps> = async () => {
   try {
     const faqs = await Faq();
 
     return {
       props: {
-        faqs: faqs?.FAQs,
+        faqs: faqs?.FAQs ?? null,
       },
       revalidate: 86400,
     };

@@ -12,9 +12,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { GetOruPhones } from "../Banner/GetOru";
-import { BottomBar } from "../BottomBar";
 import { Separator } from "../ui/separator";
+import GetOruPhones from "../Banner/GetOru";
+import BottomBar from "../BottomBar";
 
 const Faq = [
   {

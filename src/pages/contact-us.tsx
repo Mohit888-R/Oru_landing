@@ -10,7 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const ContactUs = ({ res }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const ContactUs = () => {
   const isLg = useResponsive("lg");
 
   return (
@@ -27,7 +27,7 @@ const ContactUs = ({ res }: InferGetStaticPropsType<typeof getStaticProps>) => {
           {useResponsive("lg") && <ContactUsMobileViewCard />}
         </span>
         <span className="lg:col-span-2">
-          <ContactForm brands={res} />
+          <ContactForm />
         </span>
       </div>
     </div>
@@ -35,14 +35,3 @@ const ContactUs = ({ res }: InferGetStaticPropsType<typeof getStaticProps>) => {
 };
 
 export default ContactUs;
-
-export const getStaticProps = async () => {
-  const res = await getHomeBrands();
-  // const res = await getMakes();
-
-  return {
-    props: {
-      res,
-    },
-  };
-};
