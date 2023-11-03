@@ -59,8 +59,12 @@ function Navbar() {
                   </ul>
                 </DropdownMenuContent>
               </DropdownMenu>
-              <Button variant={"ghost"}>FAQs</Button>
-              <Button variant={"ghost"}>About Us</Button>
+              <Button variant={"ghost"}>
+                <Link href={"/faqs"}>FAQs</Link>
+              </Button>
+              <Button variant={"ghost"}>
+                <Link href={"/aboutus"}>About Us </Link>
+              </Button>
             </div>
           </div>
         </nav>

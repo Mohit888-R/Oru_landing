@@ -14,6 +14,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { GetOruPhones } from "../Banner/GetOru";
 import { BottomBar } from "../BottomBar";
+import { Separator } from "../ui/separator";
 
 const Faq = [
   {
@@ -234,59 +235,6 @@ const Footer: React.FC = () => {
       {router.asPath !== "/faqs" &&
         router.asPath !== "/about-us" &&
         router.asPath !== "/report-problem" && <FrequentQuestions />}
-      {isLg && (
-        <div className="downloadApp relative flex h-80 w-full items-center justify-end bg-[#EDEFFC]">
-          <span className="absolute left-[10%] flex h-full flex-col items-center justify-center ">
-            <span className=" -ml-24 font-poppins text-[40px] font-semibold lg:text-3xl  ">
-              Get the <br /> OruPhones App
-            </span>
-            <span className="flex h-1/2 w-full items-center justify-between">
-              <Image
-                src="/assets/Footer/playStore.svg"
-                alt="Footer Vector"
-                width="0"
-                height="0"
-                sizes="100vw"
-                className="h-auto w-1/2 p-4 cursor-pointer"
-              />
-              <Image
-                src="/assets/Footer/appStore.svg"
-                alt="Footer Vector"
-                width="0"
-                height="0"
-                sizes="100vw"
-                className="h-auto w-1/2 p-4 cursor-pointer"
-              />
-            </span>
-          </span>
-          <span className="flex h-full w-fit justify-end">
-            <Image
-              src="/assets/Footer/vector.svg"
-              alt="Footer Vector"
-              width="0"
-              height="0"
-              sizes="100vw"
-              className="h-full w-auto"
-            />
-            <Image
-              src="/assets/Footer/orudesign.png"
-              alt="Footer Oru Design"
-              width="0"
-              height="0"
-              sizes="100vw"
-              className="absolute right-60 mt-28 h-[340px] w-[200px]"
-            />
-            <Image
-              src="/assets/Footer/orudesign.png"
-              alt="Footer Oru Design"
-              width="0"
-              height="0"
-              sizes="100vw"
-              className="absolute right-40 mt-16 h-[340px] w-[200px]"
-            />
-          </span>
-        </div>
-      )}
       <GetOruPhones />
       <div className="container px-16 text-[14px] py-8 align-justify">
         Sell Samsung Phone | Sell Apple Phone | Sell OnePlus Phone | Sell Asus
@@ -299,6 +247,7 @@ const Footer: React.FC = () => {
         Sell Lava Phone | Sell Intex Phone | Sell Meizu Phone | Sell Huawei
         Phone | Sell ZTE Phone | Sell Alcatel Phone
       </div>
+      <Separator />
       <BottomBar />
     </footer>
   );

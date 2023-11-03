@@ -8,3 +8,10 @@ export type TReview = {
 	displayOrder: number;
 	date: string;
 };
+
+
+export type TFaq = {
+    id:      string;
+    question: string;
+    answer:   string;
+}

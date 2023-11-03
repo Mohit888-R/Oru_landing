@@ -11,8 +11,6 @@ import Footer from "@/components/Footer";
 import BuySellBanner from "@/components/Banner/BuySellBanner";
 import { FollowUs } from "@/components/FollowUs";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export type TProps = {
   review: TReview[] | null;
 };
@@ -41,6 +39,7 @@ export const getStaticProps: GetStaticProps<TProps> = async () => {
 export default function Home({
   review,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  console.log(Date.now());
   return (
     <div>
       {/* navbar */}

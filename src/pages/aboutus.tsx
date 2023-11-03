@@ -4,6 +4,13 @@ import { ChevronRight } from "lucide-react";
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { TReview } from "./types";
+import reviews from "@/lib/fetchers/reviews";
+import AboutUsBanner from "@/components/AboutUs/AboutUsBanner";
+import AboutUsMobileBanner from "@/components/AboutUs/AboutUsMobileBanner";
+import VisionCard from "@/components/Card/VisionCard";
+import ReviewsCard from "@/components/Card/ReviewCard";
+import TeamCard from "@/components/Card/TeamCard";
 
 const AboutCount = ({
   num,
@@ -15,7 +22,7 @@ const AboutCount = ({
   return (
     <div className="flex flex-col">
       <span className="relative text-[32px] font-extrabold  md:text-[40px]">
-        <span className="absolute top-2 h-2/3 w-[2px] bg-brand-gray"></span>
+        <span className="absolute top-2 h-2/3 w-[2px] bg-[#8c8c8c]"></span>
         <span className="px-2"> {num}</span>
       </span>
       <span className="text-[18px] font-semibold md:text-[20px]">{title}</span>
@@ -55,16 +62,11 @@ export type TProps = {
   review: TReview[] | null;
 };
 
-export const getStaticProps: GetStaticProps<TProps> = async (context) => {
+export const getStaticProps: GetStaticProps<TProps> = async () => {
   try {
     const review = await reviews();
     return {
       props: {
-        ...(await serverSideTranslations(context.locale ?? "en", [
-          "common",
-          "index",
-        ])),
-
         review: review?.reviews.slice(0, 4),
       },
       revalidate: 86400, // 24 hours
@@ -73,15 +75,7 @@ export const getStaticProps: GetStaticProps<TProps> = async (context) => {
     console.log(error);
     return {
       props: {
-        ...(await serverSideTranslations(context.locale ?? "en", [
-          "common",
-          "index",
-        ])),
-        brands: null,
-        Allbrand: null,
-        videos: null,
         review: null,
-        blogs: null,
       },
       revalidate: 600, // 1 minute
     };
@@ -92,16 +86,18 @@ const AboutUs = ({
   review,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const isLg = useResponsive("lg");
+
+  console.log("Lg : ", isLg);
   return (
     <div>
-      <NextSeo
+      {/* <NextSeo
         title="About Us | ORUphones"
         description="This is About Us | Oruphones "
-      />
+      /> */}
       <div className="navbarClearance w-full pt-24" />
       {/* search keyword  & welcome text*/}
       {isLg && (
-        <span className="container my-4 flex text-[16px] text-brand-gray">
+        <span className="container my-4 flex text-[16px] text-[#8c8c8c]">
           <Link href={`/`} className="hover:underline">
             Home Page
           </Link>
@@ -123,8 +119,8 @@ const AboutUs = ({
           </p>
         </div>
 
-        {useResponsive("lg") && <AboutUsBanner />}
-        {!useResponsive("lg") && <AboutUsMobileBanner />}
+        {isLg && <AboutUsBanner />}
+        {!isLg && <AboutUsMobileBanner />}
 
         <div className="container space-y-6 pt-12 text-center text-[16px] font-normal leading-7 md:text-[18px]">
           <p>
@@ -144,12 +140,11 @@ const AboutUs = ({
           </p>
 
           <p className="my-8 text-[20px] font-medium leading-8">
-            {" "}
             This is achievable with our strong technology stack and a dedicated
             team of professionals.
           </p>
         </div>
-        <div className="font-outline-2  container py-10 text-center text-[32px] text-white md:text-[56px]">
+        <div className="font-outline-2  container py-10 text-center text-[32px] text-gray-500 md:text-[56px]">
           <span className="text-blue-900">O</span>LD.{" "}
           <span className="text-blue-900">R</span>EFURBISHED.{" "}
           <span className="text-blue-900">U</span>SED. SMARTPHONES.
@@ -240,10 +235,10 @@ const AboutUs = ({
           Customer Reviews
         </div>
         <div className="container space-y-4 px-6 py-16 md:flex md:gap-10 md:space-y-0">
-          <div className="grid grid-cols-1 gap-y-[0.6rem] lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-y-[0.6rem] gap-4 lg:grid-cols-4">
             {review &&
               review.map((item, index) => (
-                <CustomerReviewsCard
+                <ReviewsCard
                   key={index}
                   customerName={item?.author}
                   rating={item?.rating}

@@ -1,4 +1,4 @@
-import { TReview } from "@/pages/types";
+import { TReview } from "@/pages/api/types";
 import ReviewsCard from "./Card/ReviewCard";
 
 const Review = ({ data }: { data: TReview[] | null }) => {

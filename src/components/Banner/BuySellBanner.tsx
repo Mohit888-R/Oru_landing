@@ -101,7 +101,7 @@ const BuySellBanner = () => {
 	];
 
 	return (
-		<div className="2xl:container mt-4 sm:mt-6 md:mt-8 lg:mt-10">
+		<div className="2xl:container mt-4 sm:mt-6 pb-8 md:mt-8 lg:mt-10">
 			<Carousal
 				Slides={slides}
 				enableNavButton={true}

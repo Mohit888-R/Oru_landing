@@ -4,17 +4,19 @@ import Link from "next/link";
 
 export const BottomBar = () => {
   const externalLink = [
-    { title: "Terms Of Service" },
-    { title: "Privacy Policy" },
-    { title: "Contact Us" },
+    { title: "Terms Of Service", link: "/terms-of-services" },
+    { title: "Privacy Policy", link: "/privacy-policy" },
+    { title: "Contact Us", link: "/contact-us" },
   ];
   return (
     <div className="container  flex lg:flex-row flex-col justify-between px-16 pt-4 pb-6">
       <div>
         <span className="iconContainer   items-center lg:ml-[2.5rem] gap-4 flex  justify-between pb-10 text-black">
-          <Link
+          <div
             className="icon aspect-square rounded-full p-1 hover:scale-110"
-            href="#"
+            onClick={() =>
+              (window.location.href = "mailto:contact@oruphones.com")
+            }
           >
             <Image
               src="/assets/Footer/mail.svg"
@@ -23,7 +25,7 @@ export const BottomBar = () => {
               alt="mail"
               className=""
             />
-          </Link>
+          </div>
           <Link
             className="icon aspect-square rounded-full p-1 hover:scale-110"
             href="https://www.facebook.com/oruphones"
@@ -92,7 +94,13 @@ export const BottomBar = () => {
 
       <ul className="lg:w-6/12 justify-center flex gap-8">
         {externalLink.map((item, index) => (
-          <li>{item.title}</li>
+          <Link
+            href={item.link}
+            target="_blank"
+            className="underline hover:cursor-pointer"
+          >
+            {item.title}
+          </Link>
         ))}
       </ul>
     </div>

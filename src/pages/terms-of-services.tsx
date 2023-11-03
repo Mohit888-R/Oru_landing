@@ -1,18 +1,15 @@
+import { NextSeo } from "next-seo";
 import Head from "next/head";
 
 function TermsOfServices() {
   return (
-    <>
-      <Head>
-        <title>{"Terms and Conditions | ORUphones"}</title>
-        <meta
-          name="description"
-          content={
-            " Oruphones has certain terms of conditions clearly outlined for our customers to ensure that there is a clearly defined relationship. These are listed here in order for you to clearly know Oruphones policies."
-          }
-        />
-      </Head>
-      <main className="container my-8">
+    <div>
+      <NextSeo
+				title="How To Sell | ORUphones"
+				description="Privacy and Policy"
+			/>
+			<div className="navbarClearance w-full pt-24" />
+      <div className="container my-8">
         <section className="mt-12 flex flex-col items-center mb-8 text-m-black">
           <div className="uppercase  font-bold" style={{ fontSize: 28 }}>
             Mobilicis India Private Limited
@@ -1243,8 +1240,8 @@ function TermsOfServices() {
             </div>
           </section>
         </main>
-      </main>
-    </>
+      </div>
+    </div>
   );
 }
 
