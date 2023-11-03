@@ -36,11 +36,11 @@ const Faq = [
 
 const FrequentQuestions = () => {
   return (
-    <div className="FAQs flex justify-between container my-8 mt-6 px-4 sm:my-12 sm:px-10 md:my-16 md:mt-12 md:px-16 lg:my-24 lg:mt-16 ">
-      <div className="mb-6 w-5/12 font-poppins text-lg font-medium leading-6 text-black sm:text-xl md:text-2xl lg:mb-10 lg:text-[1.75rem] lg:tracking-tighter">
+    <div className="FAQs flex lg:flex-row flex-col justify-between container my-8 mt-6 px-4 sm:my-12 sm:px-10 md:my-16 md:mt-12 md:px-16 lg:my-24 lg:mt-16 ">
+      <div className="mb-6  lg:w-5/12 font-poppins text-lg font-medium leading-6 text-black sm:text-xl md:text-2xl lg:mb-10 lg:text-[1.75rem] lg:tracking-tighter">
         Frequently Asked Questions(FAQs)
       </div>
-      <div className="w-6/12">
+      <div className=" w-full lg:w-6/12">
         <Accordion
           type="single"
           collapsible
@@ -288,6 +288,17 @@ const Footer: React.FC = () => {
         </div>
       )}
       <GetOruPhones />
+      <div className="container px-16 text-[14px] py-8 align-justify">
+        Sell Samsung Phone | Sell Apple Phone | Sell OnePlus Phone | Sell Asus
+        Phone | Sell Xiaomi Phone | Sell Oppo Phone | Sell LG Phone | Sell
+        Realme Phone | Sell Poco Phone | Sell IQOO Phone | Sell Sony Phone |
+        Sell Google Phone | Sell Honor Phone | Sell Infinix Phone | Sell Tecno
+        Phone | Sell Vivo Phone | Sell Micromax Phone | Sell Nokia Phone | Sell
+        Lenovo Phone | Sell Motorola Phone | Sell HTC Phone | Sell Blackberry
+        Phone | Sell Panasonic Phone | Sell Gionee Phone | Sell Karbonn Phone |
+        Sell Lava Phone | Sell Intex Phone | Sell Meizu Phone | Sell Huawei
+        Phone | Sell ZTE Phone | Sell Alcatel Phone
+      </div>
       <BottomBar />
     </footer>
   );

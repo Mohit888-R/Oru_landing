@@ -9,9 +9,9 @@ export const BottomBar = () => {
     { title: "Contact Us" },
   ];
   return (
-    <div className="container  flex justify-between px-16 pt-4 pb-6">
+    <div className="container  flex lg:flex-row flex-col justify-between px-16 pt-4 pb-6">
       <div>
-        <span className="iconContainer items-center ml-[2.5rem] gap-4 flex w-full justify-between pb-10 text-black">
+        <span className="iconContainer   items-center lg:ml-[2.5rem] gap-4 flex  justify-between pb-10 text-black">
           <Link
             className="icon aspect-square rounded-full p-1 hover:scale-110"
             href="#"
@@ -90,7 +90,7 @@ export const BottomBar = () => {
         </span>
       </div>
 
-      <ul className="flex gap-8">
+      <ul className="lg:w-6/12 justify-center flex gap-8">
         {externalLink.map((item, index) => (
           <li>{item.title}</li>
         ))}

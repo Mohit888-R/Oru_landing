@@ -9,6 +9,7 @@ import { TReview } from "./types";
 import reviews from "@/lib/fetchers/reviews";
 import Footer from "@/components/Footer";
 import BuySellBanner from "@/components/Banner/BuySellBanner";
+import { FollowUs } from "@/components/FollowUs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -48,6 +49,7 @@ export default function Home({
         <DownloadBannerfirst />
         <TimeStamp />
         <BuySellBanner/>
+        <FollowUs />
         <Review data={review} />
       </div>
       <Footer />
