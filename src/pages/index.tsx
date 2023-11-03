@@ -44,7 +44,7 @@ export default function Home({
   return (
     <div>
       {/* navbar */}
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="pt-20">
         <DownloadBannerfirst />
         <TimeStamp />
@@ -52,7 +52,7 @@ export default function Home({
         <FollowUs />
         <Review data={review} />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

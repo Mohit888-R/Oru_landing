@@ -11,6 +11,7 @@ import Link from 'next/link';
 
 const HowToBuy = () => {
 	const isLg = useResponsive('lg');
+	console.log("isLg", isLg);
 	return (
 		<div>
 			<NextSeo title="How to Buy | ORUphones" description="ORU GUIDE" />
