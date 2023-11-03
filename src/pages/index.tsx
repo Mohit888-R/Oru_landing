@@ -5,7 +5,7 @@ import { DownloadBannerfirst } from "@/components/Banner/DownloadBanner";
 import { TimeStamp } from "@/components/TimeStamp";
 import Review from "@/components/Review";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import { TReview } from "./types";
+import { TReview } from "../types";
 import reviews from "@/lib/fetchers/reviews";
 import Footer from "@/components/Footer";
 import BuySellBanner from "@/components/Banner/BuySellBanner";
@@ -47,7 +47,7 @@ export default function Home({
       <div className="pt-20">
         <DownloadBannerfirst />
         <TimeStamp />
-        <BuySellBanner/>
+        <BuySellBanner />
         <FollowUs />
         <Review data={review} />
       </div>

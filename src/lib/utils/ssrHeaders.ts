@@ -1,4 +1,4 @@
-import SSRreq from "@/pages/types/SSRreq";
+import SSRreq from "@/types/SSRreq";
 
 export default function SSRHeaders(req?: SSRreq, csrfToken?: string) {
 	return typeof window === 'undefined'

@@ -4,7 +4,7 @@ import { ChevronRight } from "lucide-react";
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { TReview } from "./types";
+import { TReview } from "../types";
 import reviews from "@/lib/fetchers/reviews";
 import AboutUsBanner from "@/components/AboutUs/AboutUsBanner";
 import AboutUsMobileBanner from "@/components/AboutUs/AboutUsMobileBanner";

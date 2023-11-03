@@ -13,7 +13,7 @@ import { useState } from "react";
 import { NextSeo } from "next-seo";
 import { Input } from "@/components/ui/input";
 import Faq from "@/lib/fetchers/faq";
-import { TFaq } from "./types";
+import { TFaq } from "../types";
 
 type TProps = {
   faqs: TFaq[] | null;

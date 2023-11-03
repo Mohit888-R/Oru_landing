@@ -1,5 +1,5 @@
 import SSRHeaders from '@/lib/utils/ssrHeaders';
-import SSRreq from '@/pages/types/SSRreq';
+import SSRreq from '@/types/SSRreq';
 
 export type TBrand = {
 	_id: string;
