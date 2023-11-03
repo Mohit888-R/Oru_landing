@@ -3,7 +3,10 @@ import Navbar from '@/components/Navbar';
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import { Inter, Poppins } from 'next/font/google';
+import { Provider } from 'jotai';
+import ResponsiveInit from '@/lib/providers/ResponsiveInit';
 
+import { DevTools } from 'jotai-devtools';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -21,13 +24,19 @@ const inter = Inter({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main
-      className={`${poppins.variable} ${inter.variable} font-poppins`}
-    >
-      <Navbar />
-      {/* <GlobalLoading /> */}
-      <Component {...pageProps} />
-      <Footer />
-    </main>
+    <>
+      <Provider>
+      <DevTools theme="dark" />
+        <ResponsiveInit />
+        <main
+          className={`${poppins.variable} ${inter.variable} font-poppins`}
+        >
+          <Navbar />
+          {/* <GlobalLoading /> */}
+          <Component {...pageProps} />
+          <Footer />
+        </main>
+      </Provider>
+    </>
   )
 }
