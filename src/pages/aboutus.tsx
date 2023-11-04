@@ -87,7 +87,7 @@ const AboutUs = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const isLg = useResponsive("lg");
 
-  console.log("Lg : ", isLg);
+  
   return (
     <div>
       {/* <NextSeo

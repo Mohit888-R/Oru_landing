@@ -15,7 +15,7 @@ const HowToBuy = () => {
 	return (
 		<div>
 			<NextSeo title="How to Buy | ORUphones" description="ORU GUIDE" />
-			<div className="navbarClearance w-full pt-24" />
+			<div className="navbarClearance w-full pt-20" />
 
 			<div className="h-[600px] bg-brand-blue py-2 text-white">
 				{isLg && (

@@ -19,7 +19,7 @@ const HowToSell = () => {
 				title="How To Sell | ORUphones"
 				description="Privacy and Policy"
 			/>
-			<div className="navbarClearance w-full pt-24" />
+			<div className="navbarClearance w-full pt-20" />
 			<div className="h-[600px] bg-brand-blue py-2 text-white">
 				{isLg && (
 					<span className="container my-4 flex text-brand-gray">

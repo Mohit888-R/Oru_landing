@@ -8,17 +8,19 @@ import {
 } from "../ui/dropdown-menu";
 import { ChevronDown } from "lucide-react";
 import { Button } from "../ui/button";
+import { useRouter } from "next/router";
 
 function Navbar() {
+  const router = useRouter();
   const option = [
     {
       title: "Sell",
-      src: '/oru-guide/how-to-sell'
+      src: "/oru-guide/how-to-sell",
     },
     {
       title: "Buy",
-      src: '/oru-guide/how-to-buy'
-    }
+      src: "/oru-guide/how-to-buy",
+    },
   ];
   return (
     <>
@@ -51,9 +53,11 @@ function Navbar() {
                       <li
                         key={index}
                         className="text-center cursor-pointer gap-2 p-1 transition-[transform] duration-200 hover:scale-105 hover:bg-gray-300"
+                        onClick={() => {
+                          router.push(item.src);
+                        }}
                       >
-                        <Link href={item.src}>{item.title}</Link>
-
+                        {item.title}
                       </li>
                     ))}
                   </ul>

@@ -39,7 +39,6 @@ export const getStaticProps: GetStaticProps<TProps> = async () => {
 export default function Home({
   review,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  console.log(Date.now());
   return (
     <div>
       {/* navbar */}

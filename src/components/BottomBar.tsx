@@ -4,9 +4,12 @@ import Link from "next/link";
 
 const BottomBar = () => {
   const externalLink = [
-    { title: "Terms Of Service", link: "/terms-of-services" },
-    { title: "Privacy Policy", link: "/privacy-policy" },
     { title: "Contact Us", link: "/contact-us" },
+    { title: "About Us", link: "/about-us" },
+    { title: "Privacy Policy", link: "/privacy-policy" },
+    { title: "Refund Policy", link: "/refund-policy" },
+    { title: "Delivery Policy", link: "/delivery-policy" },
+    { title: "Terms Of Service", link: "/terms-of-services" },
   ];
   return (
     <div className="container  flex lg:flex-row flex-col justify-between px-16 pt-4 pb-6">
@@ -92,12 +95,12 @@ const BottomBar = () => {
         </span>
       </div>
 
-      <ul className="lg:w-6/12 justify-center flex gap-8">
+      <ul className="  grid grid-cols-2 gap-4 text-center">
         {externalLink.map((item, index) => (
           <Link
             href={item.link}
             target="_blank"
-            className="underline hover:cursor-pointer"
+            className="underline hover:cursor-pointer text-xs lg:text-lg"
           >
             {item.title}
           </Link>

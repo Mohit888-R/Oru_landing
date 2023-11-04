@@ -5,7 +5,12 @@ const targetDate = new Date("2023-11-10T00:00:00Z");
 const formatNumber = (number?: number) =>
   number !== undefined && number < 10 ? `0${number}` : number;
 
-const renderer = ({
+export const TextChar = ({ char }: { char: string }) => {
+  return (
+    <span className="opacity-60 font-normal text-[20px] lg:text-[42px] px-1 lg:px-2">{char}</span>
+  );
+};
+export const renderer = ({
   days,
   hours,
   minutes,
@@ -23,8 +28,10 @@ const renderer = ({
   } else {
     return (
       <div>
-        {formatNumber(days)}:{formatNumber(hours)}:{formatNumber(minutes)}:
-        {formatNumber(seconds)}
+        {formatNumber(days)}
+        <TextChar char="d" />:{formatNumber(hours)}
+        <TextChar char="h" />:{formatNumber(minutes)}
+        <TextChar char="m" />
       </div>
     );
   }

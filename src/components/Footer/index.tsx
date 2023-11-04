@@ -7,7 +7,7 @@ import {
 import { Button, buttonVariants } from "@/components/ui/button";
 import useResponsive from "@/hooks/useResponsive";
 import { cn } from "@/lib/utils";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Router } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -37,7 +37,7 @@ const Faq = [
 
 const FrequentQuestions = () => {
   return (
-    <div className="FAQs flex lg:flex-row flex-col justify-between container my-8 mt-6 px-4 sm:my-12 sm:px-10 md:my-16 md:mt-12 md:px-16 lg:my-24 lg:mt-16 ">
+    <div className="FAQs flex lg:flex-row  flex-col justify-between container my-8 mt-6 px-4 sm:my-12 sm:px-10 md:my-16 md:mt-12 md:px-16 lg:my-24 lg:mt-16 ">
       <div className="mb-6  lg:w-5/12 font-poppins text-lg font-medium leading-6 text-black sm:text-xl md:text-2xl lg:mb-10 lg:text-[1.75rem] lg:tracking-tighter">
         Frequently Asked Questions(FAQs)
       </div>
@@ -60,6 +60,12 @@ const FrequentQuestions = () => {
             </AccordionItem>
           ))}
         </Accordion>
+        <Link
+          href={"/faqs"}
+          className="flex hover:cursor-pointer border-black hover:bg-slate-200 justify-center border px-4 py-2 mt-8 w-28 m-auto  rounded-full"
+        >
+          View All
+        </Link>
       </div>
     </div>
   );
@@ -130,7 +136,7 @@ const Footer: React.FC = () => {
             >
               <div className="mt-4 h-1/2">
                 <Image
-                  src="/assets/Footer/battery.png"
+                  src="/assets/Footer/footprint.svg"
                   alt="Footer Vector"
                   width="0"
                   height="0"
@@ -140,10 +146,10 @@ const Footer: React.FC = () => {
               </div>
               <span className=" mx-10 mb-10 flex flex-col flex-nowrap items-center justify-center text-center">
                 <span className="font-poppins text-xs font-bold leading-tight tracking-tight lg:text-2xl">
-                  Selling 10,000 used phones on ORUphones
+                  Green your footprint, sustainably
                 </span>
                 <span className="text-[12px] md:text-[18px]">
-                  {"It's like taking 250 cars off the road for a year"}
+                  {"Make a positive environmental impact with each purchase."}
                 </span>
               </span>
             </div>
@@ -155,7 +161,7 @@ const Footer: React.FC = () => {
             >
               <div className="mt-4 h-1/2">
                 <Image
-                  src="/assets/Footer/battery.png"
+                  src="/assets/Footer/owndevice.svg"
                   alt="Footer Vector"
                   width="0"
                   height="0"
@@ -165,22 +171,22 @@ const Footer: React.FC = () => {
               </div>
               <span className=" mx-10 mb-10 flex flex-col flex-nowrap items-center justify-center text-center">
                 <span className="font-poppins text-xs font-bold leading-tight tracking-tight lg:text-2xl">
-                  Selling 10,000 used phones on ORUphones
+                  Opting for pre-owned devices
                 </span>
                 <span className="text-[12px] md:text-[18px]">
-                  {"It's like taking 250 cars off the road for a year"}
+                  {"Embracing a circular economy for electronics"}
                 </span>
               </span>
             </div>
             <div
-              className={`absolute mt-28 flex h-3/5 w-3/4 max-w-xl origin-[50%_250%] flex-col items-center justify-around rounded-xl bg-[#FFDCFE] shadow-xl transition-all duration-1000`}
+              className={`absolute mt-28 flex h-3/5 w-3/4 max-w-xl origin-[50%_250%] flex-col items-center justify-around rounded-xl bg-[#9896EB] shadow-xl transition-all duration-1000`}
               style={{
                 transform: `rotate(${(step + 3) * 90}deg)`,
               }}
             >
               <div className="mt-4 h-1/2">
                 <Image
-                  src="/assets/Footer/battery.png"
+                  src="/assets/Footer/mobileglow.svg"
                   alt="Footer Vector"
                   width="0"
                   height="0"
@@ -190,17 +196,17 @@ const Footer: React.FC = () => {
               </div>
               <span className=" mx-10 mb-10 flex flex-col flex-nowrap items-center justify-center text-center">
                 <span className="font-poppins text-xs font-bold leading-tight tracking-tight lg:text-2xl">
-                  Selling 10,000 used phones on ORUphones
+                  Buying 1,000 refurbished phones on ORUphones
                 </span>
                 <span className="text-[12px] md:text-[18px]">
-                  {"It's like taking 250 cars off the road for a year"}
+                  {"It's like recycling around 13,000 baseballs."}
                 </span>
               </span>
             </div>
             <div
               className={`circle absolute top-[60%] -z-10 aspect-square w-full transform rounded-full transition-all duration-1000 ease-in-out ${
                 step % 4 === 0 && "bg-[#DCFFE4]"
-              } ${step % 4 === 1 && "bg-[#DDDCFF]"} ${
+              } ${step % 4 === 1 && "bg-[#9d9cd8]"} ${
                 step % 4 === 2 && "bg-[#A5DFEB]"
               } ${step % 4 === 3 && "bg-[#FFDCFE]"}`}
             />
@@ -233,8 +239,10 @@ const Footer: React.FC = () => {
       )}
       {/*  */}
       {router.asPath !== "/faqs" &&
-        router.asPath !== "/about-us" &&
-        router.asPath !== "/report-problem" && <FrequentQuestions />}
+        router.asPath !== "/delivery-policy" &&
+        router.asPath !== "/refund-policy" &&
+        router.asPath !== "/privacy-policy" &&
+        router.asPath !== "/about-us" && <FrequentQuestions />}
       <GetOruPhones />
       <div className="container px-16 text-[14px] py-8 align-justify">
         Sell Samsung Phone | Sell Apple Phone | Sell OnePlus Phone | Sell Asus
