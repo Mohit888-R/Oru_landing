@@ -5,6 +5,8 @@ import type { AppProps } from 'next/app'
 import { Inter, Poppins } from 'next/font/google';
 import { Provider } from 'jotai';
 import ResponsiveInit from '@/lib/providers/ResponsiveInit';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 import { DevTools } from 'jotai-devtools';
 
@@ -23,10 +25,28 @@ const inter = Inter({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  useEffect(() => { 
+    if (
+      router.pathname !== '/' && 
+      router.pathname !== '/oru-guide/how-to-buy' && 
+      router.pathname !== '/oru-guide/how-to-sell' &&
+      router.pathname !=='/contact-us' && 
+      router.pathname !=='/delivery-policy' && 
+      router.pathname !=='/faqs' && 
+      router.pathname !=='/privacy-policy' && 
+      router.pathname !=='/aboutus' && 
+      router.pathname !=='/refund-policy' && 
+      router.pathname !=='/terms-of-services'
+      ) 
+    {
+      router.push('/');
+    }
+  }, [router.pathname]);
   return (
     <>
       <Provider>
-      {/* <DevTools theme="dark" /> */}
+        {/* <DevTools theme="dark" /> */}
         <ResponsiveInit />
         <main
           className={`${poppins.variable} ${inter.variable} font-poppins`}
