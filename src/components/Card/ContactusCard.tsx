@@ -32,9 +32,8 @@ const ContactusCard = () => {
             </li>
             <li className="flex gap-4">
               <MapPin className="h-4 w-4" />
-              66,Scheme No. 10, Mobilicis India Private Limited, near Jain
-              Temple, Sakti Nagar
-              <br /> Oruphones office address line 2
+              66, Scheme 10, Alwar, Rajasthan (IN)
+              <br />
             </li>
           </ul>
         </div>
@@ -45,30 +44,35 @@ const ContactusCard = () => {
             <Link
               className="icon aspect-square rounded-full bg-white p-1 hover:scale-110"
               href="https://www.facebook.com/oruphones"
+              target="_blank"
             >
               <Facebook size={20} className="m-1 aspect-square bg-white" />
             </Link>
             <Link
               className="icon aspect-square rounded-full bg-white p-1 hover:scale-110"
               href="https://www.instagram.com/oruphones"
+              target="_blank"
             >
               <Instagram size={20} className="m-1 aspect-square bg-white" />
             </Link>
             <Link
               className="icon aspect-square rounded-full bg-white p-1 hover:scale-110"
               href="https://www.linkedin.com/oruphones"
+              target="_blank"
             >
               <Linkedin size={20} className="m-1 aspect-square bg-white" />
             </Link>
             <Link
               className="icon aspect-square rounded-full bg-white p-1 hover:scale-110"
               href="https://www.youtube.com/oruphones"
+              target="_blank"
             >
               <Youtube size={20} className="m-1 aspect-square bg-white" />
             </Link>
             <Link
               className="icon aspect-square rounded-full bg-white p-1 hover:scale-110"
               href="https://www.twitter.com/oruphones"
+              target="_blank"
             >
               <Twitter size={20} className="m-1 aspect-square bg-white" />
             </Link>

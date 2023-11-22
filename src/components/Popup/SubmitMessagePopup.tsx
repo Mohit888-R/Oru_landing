@@ -29,6 +29,7 @@ const SubmitMessagePopup = ({
       });
       setOpen(false);
       setThankPopupOpen(true);
+      console.log("calling on submitted");
       onSubmitted();
     } catch (error) {
       console.error(error);
@@ -56,7 +57,7 @@ const SubmitMessagePopup = ({
               Cancel
             </Button>
             <Button
-              variant={"secondary"}
+              variant={"default"}
               className="w-5/12"
               onClick={() => {
                 onSubmit();

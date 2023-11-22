@@ -1,4 +1,4 @@
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -149,17 +149,17 @@ const WhyOruCard = ({
           </CardDescription>
         </CardHeader>
         <CardFooter className="mt-1 p-0">
-          <Link
+          <Button
             className={cn(
               buttonVariants({ variant: "secondary" }),
               `w-full bg-[#3f3e8f] hover:bg-[#3f3e8f] text-white`
             )}
-            href={link}
+            
           >
             <span className="overflow-hidden text-ellipsis whitespace-nowrap text-sm font-bold">
               {content.btnText}
             </span>
-          </Link>
+          </Button>
         </CardFooter>
       </CardContent>
     </Card>

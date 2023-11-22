@@ -14,8 +14,8 @@ const ThanksMessagePopup = ({
     <Dialog open={isOpen} onOpenChange={setOpen}>
       <DialogContent className="w-4/5 md:w-full" showCloseButton={false}>
         <DialogHeader>
-          <div className="flex text-[24px] m-auto items-center  gap-2 font-semibold text-center">
-            <CheckCircle /> Thank You!
+          <div className="flex text-[24px] m-auto items-center  gap-2 font-semibold text-center text-[#2AA100]">
+            <CheckCircle color="#2AA100" /> Thank You!
           </div>
           <div className="text-[18px] font-normal py-4 text-center">
             Your feedback is important to us and we take it very seriously, we
@@ -23,7 +23,7 @@ const ThanksMessagePopup = ({
           </div>
           <div className="flex flex-row justify-around ">
             <Button
-              variant={"secondary"}
+              variant={"default"}
               className="w-5/12"
               onClick={() => setOpen(false)}
             >

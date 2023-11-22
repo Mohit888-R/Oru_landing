@@ -23,8 +23,8 @@ const ContactUs = () => {
       <h1 className="py-4 text-center text-[28px] font-bold">Contact Us </h1>
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         <span className="col-span-1 flex justify-center px-4">
-          {!useResponsive("lg") && <ContactusCard />}
-          {useResponsive("lg") && <ContactUsMobileViewCard />}
+          {useResponsive("lg") && <ContactusCard />}
+          {!useResponsive("lg") && <ContactUsMobileViewCard />}
         </span>
         <span className="lg:col-span-2">
           <ContactForm />

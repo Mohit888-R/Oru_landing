@@ -25,6 +25,7 @@ const FollowUs = () => {
           <Link
             className="icon aspect-square rounded-full p-1 hover:scale-110"
             href="https://www.facebook.com/oruphones"
+            target="_blank"
           >
             <Image
               src="/assets/Footer/facebook.svg"
@@ -38,6 +39,7 @@ const FollowUs = () => {
           <Link
             className="icon aspect-square rounded-full p-1 hover:scale-110"
             href="https://www.instagram.com/oruphones"
+            target="_blank"
           >
             <Image
               src="/assets/Footer/instagram.svg"
@@ -51,6 +53,7 @@ const FollowUs = () => {
           <Link
             className="icon aspect-square rounded-full p-1 hover:scale-110"
             href="https://www.linkedin.com/oruphones"
+            target="_blank"
           >
             <Image
               src="/assets/Footer/linkedIn.svg"
@@ -64,6 +67,7 @@ const FollowUs = () => {
           <Link
             className="icon aspect-square rounded-full p-1 hover:scale-110"
             href="https://www.youtube.com/oruphones"
+            target="_blank"
           >
             <Image
               src="/assets/Footer/ytube.svg"
@@ -76,6 +80,7 @@ const FollowUs = () => {
           <Link
             className="icon aspect-square rounded-full p-1 hover:scale-110"
             href="https://www.twitter.com/oruphones"
+            target="_blank"
           >
             <Image
               src="/assets/Footer/twitter.svg"
