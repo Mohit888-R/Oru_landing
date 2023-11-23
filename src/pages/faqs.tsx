@@ -81,10 +81,7 @@ const Faqs = ({ faqs }: InferGetStaticPropsType<typeof getStaticProps>) => {
               onChange={handleSearch}
             />
             <span className="absolute right-2 top-1 flex lg:right-4 ">
-              <Search
-                size={36}
-                className="rounded-full  p-2 hover:rounded-full hover:bg-slate-100 hover:shadow-2xl active:scale-105"
-              />
+              
               <Mic
                 size={36}
                 className="rounded-full  p-2 hover:rounded-full hover:bg-slate-100 hover:shadow-2xl active:scale-105"

@@ -9,6 +9,7 @@ export const PlayStore = () => {
       </span>
       <Link
         href={"https://play.google.com/store/apps/details?id=com.oruphones.oru"}
+        target="_blank"
       >
         <Image
           src={"https://d1tl44nezj10jx.cloudfront.net/assets/play_store.png"}
@@ -28,7 +29,7 @@ export const AppStore = () => {
       <span className="bg-white  p-2">
         <Image src={"/assets/applestore.svg"} width={180} height={180} alt="" />
       </span>
-      <Link href={"https://apps.apple.com/in/app/oruphones/id1629378420"}>
+      <Link href={"https://apps.apple.com/in/app/oruphones/id1629378420"} target="_blank">
         <Image
           src={"https://d1tl44nezj10jx.cloudfront.net/assets/app_store.svg"}
           width={120}

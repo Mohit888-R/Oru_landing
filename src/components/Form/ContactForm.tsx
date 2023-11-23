@@ -130,6 +130,9 @@ const ContactForm = () => {
     setMessage(values.message);
     setOpen(true);
   }
+  useEffect(()=>{
+    console.log("firstName: ", firstName);
+  }, [firstName])
 
   const payload: TProps = {
     firstName: firstName || "",
@@ -255,6 +258,7 @@ const ContactForm = () => {
             setEmail("");
             setPhone("");
             setMessage("");
+            form.reset();
           }}
         />
       }

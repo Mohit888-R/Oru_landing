@@ -4,6 +4,7 @@ import React from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuItem,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import { ChevronDown } from "lucide-react";
@@ -48,7 +49,7 @@ function Navbar() {
                   </div>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="no-scrollbar overflow-auto">
-                  <ul>
+                  {/* <ul>
                     {option.map((item, index) => (
                       <li
                         key={index}
@@ -60,7 +61,18 @@ function Navbar() {
                         {item.title}
                       </li>
                     ))}
-                  </ul>
+                  </ul> */}
+                  {option.map((item, index) => (
+                    <DropdownMenuItem
+                      key={index}
+                      className="text-center cursor-pointer gap-2 p-1 transition-[transform] duration-200 hover:scale-105 hover:bg-gray-300"
+                      onClick={() => {
+                        router.push(item.src);
+                      }}
+                    >
+                      {item.title}
+                    </DropdownMenuItem>
+                  ))}
                 </DropdownMenuContent>
               </DropdownMenu>
               <Button variant={"ghost"}>

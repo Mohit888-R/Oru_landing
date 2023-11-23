@@ -32,9 +32,7 @@ const ContactUsMobileViewCard = () => {
             </li>
             <li className="flex gap-4 text-left">
               <MapPin className="h-4 w-4" />
-              66, Scheme No. 10
-              <br /> Mobilicis India Private Limited,
-              <br /> Near Jain Temple, Sakti Nagar
+              66, Scheme 10, Alwar, Rajasthan (IN)
             </li>
           </ul>
         </div>
