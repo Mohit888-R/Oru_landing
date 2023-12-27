@@ -9,8 +9,6 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 import { DevTools } from 'jotai-devtools';
-import Head from 'next/head';
-import AppleAssociation from '@/components/AppleAssociation';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -28,32 +26,25 @@ const inter = Inter({
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  useEffect(() => {
-    if (
-      router.pathname !== '/apple-app-site-association' &&
-      router.pathname !== '/' &&
-      router.pathname !== '/oru-guide/how-to-buy' &&
-      router.pathname !== '/oru-guide/how-to-sell' &&
-      router.pathname !== '/contact-us' &&
-      router.pathname !== '/delivery-policy' &&
-      router.pathname !== '/faqs' &&
-      router.pathname !== '/privacy-policy' &&
-      router.pathname !== '/aboutus' &&
-      router.pathname !== '/refund-policy' &&
-      router.pathname !== '/terms-of-services'
-    ) {
-      router.push('/');
-    }
-  }, [router.pathname]);
+  // useEffect(() => {
+  //   if (
+  //     router.pathname !== '/apple-app-site-association' &&
+  //     router.pathname !== '/' &&
+  //     router.pathname !== '/oru-guide/how-to-buy' &&
+  //     router.pathname !== '/oru-guide/how-to-sell' &&
+  //     router.pathname !== '/contact-us' &&
+  //     router.pathname !== '/delivery-policy' &&
+  //     router.pathname !== '/faqs' &&
+  //     router.pathname !== '/privacy-policy' &&
+  //     router.pathname !== '/aboutus' &&
+  //     router.pathname !== '/refund-policy' &&
+  //     router.pathname !== '/terms-of-services'
+  //   ) {
+  //     router.push('/');
+  //   }
+  // }, [router.pathname]);
   return (
     <>
-      <Head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, minimal-ui"
-        />
-        <AppleAssociation />
-      </Head>
       <Provider>
         {/* <DevTools theme="dark" /> */}
         <ResponsiveInit />
